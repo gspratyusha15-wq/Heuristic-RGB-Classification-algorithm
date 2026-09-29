@@ -49,3 +49,8 @@ districts_shp = "Your_District_Boundaries"
 zone_field = "Unique_Zone_ID"
 
 Press Enter to run. The script will generate a standalone table named District_Probability_Table in your project's default geodatabase.
+
+## Customizing the Heuristic Algorithm
+The default heuristic logic in extract_probabilities.py is calibrated for the standard IMD tercile probability legend (Yellow/Red for Below Normal, Greens for Normal, Blues for Above Normal).
+
+If you are processing maps from a different meteorological agency or evaluating a different climatic index (e.g., drought severity maps), you will need to adjust the RGB thresholding logic in the script's UpdateCursor block to match the specific color ramps of your target legend.
